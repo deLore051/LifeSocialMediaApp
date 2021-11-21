@@ -3,27 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A65E8E610696C0D6B2B8401 /* Pods_LifeSocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEF1A890A6C4CA567EC5AF9 /* Pods_LifeSocialMediaApp.framework */; };
+		7F87FF7F2749377E00B542FB /* PostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F87FF7E2749377E00B542FB /* PostInfo.swift */; };
 		7F9B05ED2742DE610072345E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B05EC2742DE610072345E /* AppDelegate.swift */; };
 		7F9B05EF2742DE610072345E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B05EE2742DE610072345E /* SceneDelegate.swift */; };
-		7F9B05F12742DE610072345E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B05F02742DE610072345E /* ViewController.swift */; };
-		7F9B05F42742DE610072345E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B05F22742DE610072345E /* Main.storyboard */; };
+		7F9B05F12742DE610072345E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B05F02742DE610072345E /* FeedViewController.swift */; };
 		7F9B05F62742DE630072345E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B05F52742DE630072345E /* Assets.xcassets */; };
 		7F9B05F92742DE630072345E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B05F72742DE630072345E /* LaunchScreen.storyboard */; };
+		7F9B06082742EF8D0072345E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B06072742EF8D0072345E /* GoogleService-Info.plist */; };
+		7F9B060B2742F9200072345E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B060A2742F9200072345E /* SignInViewController.swift */; };
+		7F9B060D2743006F0072345E /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B060C2743006F0072345E /* UIButton+Additions.swift */; };
+		7F9B060F274300DF0072345E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B060E274300DF0072345E /* AuthManager.swift */; };
+		7F9B06112743013B0072345E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B06102743013B0072345E /* SignUpViewController.swift */; };
+		7FE6E2472748D2A5004BB472 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E2462748D2A5004BB472 /* ErrorManager.swift */; };
+		7FE6E2492748D444004BB472 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E2482748D444004BB472 /* TabBarViewController.swift */; };
+		7FE6E24B2748D4E0004BB472 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E24A2748D4E0004BB472 /* ProfileViewController.swift */; };
+		7FE6E24D2748D4F5004BB472 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E24C2748D4F5004BB472 /* NotificationsViewController.swift */; };
+		7FE6E24F2748D518004BB472 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E24E2748D518004BB472 /* DiscoverViewController.swift */; };
+		7FE6E2512748D665004BB472 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E2502748D665004BB472 /* UserInfo.swift */; };
+		7FE6E2532748D890004BB472 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E2522748D890004BB472 /* Constants.swift */; };
+		7FE6E2552748D98E004BB472 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E2542748D98E004BB472 /* DatabaseManager.swift */; };
+		7FE6E2572748DB08004BB472 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6E2562748DB08004BB472 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D643CFA58CAF4F2CFBFBD38 /* Pods-LifeSocialMediaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSocialMediaApp.release.xcconfig"; path = "Target Support Files/Pods-LifeSocialMediaApp/Pods-LifeSocialMediaApp.release.xcconfig"; sourceTree = "<group>"; };
+		54B209C7D936C0A787376B9F /* Pods-LifeSocialMediaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSocialMediaApp.debug.xcconfig"; path = "Target Support Files/Pods-LifeSocialMediaApp/Pods-LifeSocialMediaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7F87FF7E2749377E00B542FB /* PostInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfo.swift; sourceTree = "<group>"; };
 		7F9B05E92742DE610072345E /* LifeSocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeSocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9B05EC2742DE610072345E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F9B05EE2742DE610072345E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F9B05F02742DE610072345E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7F9B05F32742DE610072345E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F9B05F02742DE610072345E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7F9B05F52742DE630072345E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F9B05F82742DE630072345E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F9B05FA2742DE630072345E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F9B06072742EF8D0072345E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F9B060A2742F9200072345E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7F9B060C2743006F0072345E /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		7F9B060E274300DF0072345E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		7F9B06102743013B0072345E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7FE6E2462748D2A5004BB472 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		7FE6E2482748D444004BB472 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7FE6E24A2748D4E0004BB472 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7FE6E24C2748D4F5004BB472 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		7FE6E24E2748D518004BB472 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		7FE6E2502748D665004BB472 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		7FE6E2522748D890004BB472 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7FE6E2542748D98E004BB472 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7FE6E2562748DB08004BB472 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		CAEF1A890A6C4CA567EC5AF9 /* Pods_LifeSocialMediaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSocialMediaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A65E8E610696C0D6B2B8401 /* Pods_LifeSocialMediaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		141C98C2E58C8CC437CB6949 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAEF1A890A6C4CA567EC5AF9 /* Pods_LifeSocialMediaApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F0D7381191BE3847ED574C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54B209C7D936C0A787376B9F /* Pods-LifeSocialMediaApp.debug.xcconfig */,
+				2D643CFA58CAF4F2CFBFBD38 /* Pods-LifeSocialMediaApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7F9B05E02742DE610072345E = {
 			isa = PBXGroup;
 			children = (
 				7F9B05EB2742DE610072345E /* LifeSocialMediaApp */,
 				7F9B05EA2742DE610072345E /* Products */,
+				1F0D7381191BE3847ED574C2 /* Pods */,
+				141C98C2E58C8CC437CB6949 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +108,93 @@
 		7F9B05EB2742DE610072345E /* LifeSocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
-				7F9B05EC2742DE610072345E /* AppDelegate.swift */,
-				7F9B05EE2742DE610072345E /* SceneDelegate.swift */,
-				7F9B05F02742DE610072345E /* ViewController.swift */,
-				7F9B05F22742DE610072345E /* Main.storyboard */,
-				7F9B05F52742DE630072345E /* Assets.xcassets */,
-				7F9B05F72742DE630072345E /* LaunchScreen.storyboard */,
+				7F9B06062742E3540072345E /* Resources */,
+				7F9B06052742E3500072345E /* Managers */,
+				7F9B06042742E34B0072345E /* Models */,
+				7F9B06032742E3440072345E /* Views */,
+				7F9B06002742E3290072345E /* Controllers */,
 				7F9B05FA2742DE630072345E /* Info.plist */,
 			);
 			path = LifeSocialMediaApp;
+			sourceTree = "<group>";
+		};
+		7F9B06002742E3290072345E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F9B06092742F9020072345E /* Auth */,
+				7F9B06012742E3340072345E /* Core */,
+				7F9B06022742E33A0072345E /* Other */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7F9B06012742E3340072345E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7FE6E2482748D444004BB472 /* TabBarViewController.swift */,
+				7FE6E24E2748D518004BB472 /* DiscoverViewController.swift */,
+				7F9B05F02742DE610072345E /* FeedViewController.swift */,
+				7FE6E24A2748D4E0004BB472 /* ProfileViewController.swift */,
+				7FE6E24C2748D4F5004BB472 /* NotificationsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7F9B06022742E33A0072345E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7F9B06032742E3440072345E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F9B05F72742DE630072345E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F9B06042742E34B0072345E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FE6E2502748D665004BB472 /* UserInfo.swift */,
+				7F87FF7E2749377E00B542FB /* PostInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F9B06052742E3500072345E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7F9B060E274300DF0072345E /* AuthManager.swift */,
+				7FE6E2462748D2A5004BB472 /* ErrorManager.swift */,
+				7FE6E2542748D98E004BB472 /* DatabaseManager.swift */,
+				7FE6E2562748DB08004BB472 /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7F9B06062742E3540072345E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F9B06072742EF8D0072345E /* GoogleService-Info.plist */,
+				7F9B05F52742DE630072345E /* Assets.xcassets */,
+				7F9B05EC2742DE610072345E /* AppDelegate.swift */,
+				7F9B05EE2742DE610072345E /* SceneDelegate.swift */,
+				7F9B060C2743006F0072345E /* UIButton+Additions.swift */,
+				7FE6E2522748D890004BB472 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7F9B06092742F9020072345E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7F9B060A2742F9200072345E /* SignInViewController.swift */,
+				7F9B06102743013B0072345E /* SignUpViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F9B05FD2742DE630072345E /* Build configuration list for PBXNativeTarget "LifeSocialMediaApp" */;
 			buildPhases = (
+				E52E2F554E765601B3CE8C4E /* [CP] Check Pods Manifest.lock */,
 				7F9B05E52742DE610072345E /* Sources */,
 				7F9B05E62742DE610072345E /* Frameworks */,
 				7F9B05E72742DE610072345E /* Resources */,
+				E0D62D1FB6A73A8A8F4A1524 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +258,82 @@
 			files = (
 				7F9B05F92742DE630072345E /* LaunchScreen.storyboard in Resources */,
 				7F9B05F62742DE630072345E /* Assets.xcassets in Resources */,
-				7F9B05F42742DE610072345E /* Main.storyboard in Resources */,
+				7F9B06082742EF8D0072345E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E0D62D1FB6A73A8A8F4A1524 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeSocialMediaApp/Pods-LifeSocialMediaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeSocialMediaApp/Pods-LifeSocialMediaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeSocialMediaApp/Pods-LifeSocialMediaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E52E2F554E765601B3CE8C4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSocialMediaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F9B05E52742DE610072345E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9B05F12742DE610072345E /* ViewController.swift in Sources */,
+				7F9B060B2742F9200072345E /* SignInViewController.swift in Sources */,
+				7F9B06112743013B0072345E /* SignUpViewController.swift in Sources */,
+				7F87FF7F2749377E00B542FB /* PostInfo.swift in Sources */,
+				7FE6E2552748D98E004BB472 /* DatabaseManager.swift in Sources */,
+				7FE6E24B2748D4E0004BB472 /* ProfileViewController.swift in Sources */,
+				7FE6E2472748D2A5004BB472 /* ErrorManager.swift in Sources */,
+				7F9B060F274300DF0072345E /* AuthManager.swift in Sources */,
+				7FE6E2492748D444004BB472 /* TabBarViewController.swift in Sources */,
+				7F9B05F12742DE610072345E /* FeedViewController.swift in Sources */,
 				7F9B05ED2742DE610072345E /* AppDelegate.swift in Sources */,
+				7FE6E2512748D665004BB472 /* UserInfo.swift in Sources */,
+				7FE6E24D2748D4F5004BB472 /* NotificationsViewController.swift in Sources */,
+				7FE6E24F2748D518004BB472 /* DiscoverViewController.swift in Sources */,
+				7FE6E2532748D890004BB472 /* Constants.swift in Sources */,
+				7F9B060D2743006F0072345E /* UIButton+Additions.swift in Sources */,
 				7F9B05EF2742DE610072345E /* SceneDelegate.swift in Sources */,
+				7FE6E2572748DB08004BB472 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7F9B05F22742DE610072345E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7F9B05F32742DE610072345E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7F9B05F72742DE630072345E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,12 +463,14 @@
 		};
 		7F9B05FE2742DE630072345E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B209C7D936C0A787376B9F /* Pods-LifeSocialMediaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5L3M6KFTBQ;
 				INFOPLIST_FILE = LifeSocialMediaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +478,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefandojcinovic.LifeSocialMediaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7F9B05FF2742DE630072345E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D643CFA58CAF4F2CFBFBD38 /* Pods-LifeSocialMediaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5L3M6KFTBQ;
 				INFOPLIST_FILE = LifeSocialMediaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefandojcinovic.LifeSocialMediaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
