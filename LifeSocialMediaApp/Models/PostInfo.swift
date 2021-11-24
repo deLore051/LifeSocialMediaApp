@@ -14,5 +14,5 @@ struct PostInfo {
 
 struct Comment {
     let postedByUser: String
-    let description: String
+    let text: String
 }

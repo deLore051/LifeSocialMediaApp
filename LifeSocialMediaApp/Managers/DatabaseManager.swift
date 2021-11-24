@@ -34,4 +34,34 @@ final class DatabaseManager {
     public func uploadPostInfo(post: PostInfo, image: UIImage, completion: @escaping (Result<Bool, Error>) -> Void) {
         
     }
+    
+    public func getUserInfo(for email: String, completion: @escaping (Result<UserInfo, Error>) -> Void) {
+        self.database
+            .collection(K.FStore.User.userInfoCollectionName)
+            .document("\(email)")
+            .getDocument { documentSnapshot, error in
+                guard let documentSnapshot = documentSnapshot,
+                      let data = documentSnapshot.data(),
+                      error == nil else {
+                    completion(.failure(error!))
+                    return
+                }
+                guard let email = data[K.FStore.User.email] as? String,
+                      let firstName = data[K.FStore.User.firstName] as? String,
+                      let lastName = data[K.FStore.User.lastName] as? String,
+                      let username = data[K.FStore.User.username] as? String,
+                      let country = data[K.FStore.User.country] as? String,
+                      let profilePhotoUrl = data[K.FStore.User.profilePhotoURL] as? String else { return }
+                
+                let user = UserInfo(
+                    email: email,
+                    username: username,
+                    firstName: firstName,
+                    lastName: lastName,
+                    country: country,
+                    profilePhotoURL: profilePhotoUrl)
+                
+                completion(.success(user))
+            }
+    }
 }

@@ -15,7 +15,7 @@ class SignUpViewController: UIViewController {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = .systemBackground
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 900)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 700)
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
@@ -235,7 +235,7 @@ class SignUpViewController: UIViewController {
         
         // ContentView
         contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        contentView.heightAnchor.constraint(equalToConstant: 900).isActive = true
+        contentView.heightAnchor.constraint(equalToConstant: 700).isActive = true
         
         // EmailTextField
         emailTextField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true

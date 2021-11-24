@@ -13,5 +13,5 @@ struct UserInfo {
     let firstName: String
     let lastName: String
     let country: String
-    let profilePhotoURL: URL?
+    let profilePhotoURL: String?
 }
