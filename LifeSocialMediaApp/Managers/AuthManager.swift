@@ -31,7 +31,6 @@ final class AuthManager {
     public func signUp(email: String,
                        password: String,
                        user: UserInfo,
-                       image: UIImage,
                        completion: @escaping (Result<Bool, Error>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             guard error == nil else {
@@ -45,12 +44,12 @@ final class AuthManager {
     }
     
     /// Method called to sign out the user
-    public func signOut(completion: @escaping (Result<Bool, Error>) -> Void) {
+    public func signOut(completion: @escaping (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
-            completion(.success(true))
+            completion(true)
         } catch {
-            completion(.failure(error))
+            completion(false)
             return
         }
     }

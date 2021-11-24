@@ -123,20 +123,6 @@ class SignUpViewController: UIViewController {
         return picker
     }()
     
-    private let profilePhotoPicker: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isUserInteractionEnabled = true
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(systemName: "photo")
-        imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.label.cgColor
-        imageView.layer.cornerRadius = 25
-        imageView.tintColor = .systemBlue
-        return imageView
-    }()
-
     private let signUpButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -164,10 +150,8 @@ class SignUpViewController: UIViewController {
     }
     
     private func addTapGesture() {
-        let tapOnContentView = UITapGestureRecognizer(target: self, action: #selector(didTapContentView))
-        contentView.addGestureRecognizer(tapOnContentView)
-        let tapOnProfilePhotoPicker = UITapGestureRecognizer(target: self, action: #selector(didTapProfilePhotoPicker))
-        profilePhotoPicker.addGestureRecognizer(tapOnProfilePhotoPicker)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapContentView))
+        contentView.addGestureRecognizer(tap)
     }
     
     @objc private func signUpButtonTapped(sender: UIButton) {
@@ -177,8 +161,7 @@ class SignUpViewController: UIViewController {
               let lastName = lastNameTextField.text, !lastName.isEmpty,
               let username = usernameTextField.text, !username.isEmpty,
               let password = passwordTextField.text, !password.isEmpty,
-              let country = countryPickerTextField.text, !country.isEmpty,
-              let profilePhoto = profilePhotoPicker.image else {
+              let country = countryPickerTextField.text, !country.isEmpty else {
             let alert = ErrorManager.shared.emptyFieldErrorAlert()
             present(alert, animated: true, completion: nil)
             return
@@ -195,16 +178,15 @@ class SignUpViewController: UIViewController {
         AuthManager.shared.signUp(
             email: email,
             password: password,
-            user: user,
-            image: profilePhoto) { [weak self] result in
+            user: user) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success:
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
-                    let navVC = UINavigationController(rootViewController: TabBarViewController())
-                    navVC.modalPresentationStyle = .fullScreen
-                    self.present(navVC, animated: true, completion: nil)
+                    let vc = TabBarViewController()
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
                 }
             case .failure(let error):
                 let alert = ErrorManager.shared.errorAlert(error)
@@ -218,16 +200,11 @@ class SignUpViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @objc private func didTapProfilePhotoPicker() {
-        let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
-        picker.allowsEditing = true
-        present(picker, animated: true, completion: nil)
-    }
-    
     private func getCountries() {
-        self.countries = Locale.isoRegionCodes.compactMap({ Locale.current.localizedString(forRegionCode: $0) })
+        self.countries = Locale
+            .isoRegionCodes
+            .compactMap({Locale.current.localizedString(forRegionCode: $0)})
+        self.countries.sort()
         print(countries)
     }
     
@@ -246,7 +223,6 @@ class SignUpViewController: UIViewController {
         contentView.addSubview(usernameTextField)
         contentView.addSubview(passwordTextField)
         contentView.addSubview(countryPickerTextField)
-        contentView.addSubview(profilePhotoPicker)
         contentView.addSubview(signUpButton)
     }
     
@@ -297,14 +273,8 @@ class SignUpViewController: UIViewController {
         countryPickerTextField.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -20).isActive = true
         countryPickerTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        // ProfilePhotoPicker
-        profilePhotoPicker.topAnchor.constraint(equalTo: countryPickerTextField.bottomAnchor, constant: 50).isActive = true
-        profilePhotoPicker.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        profilePhotoPicker.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -20).isActive = true
-        profilePhotoPicker.heightAnchor.constraint(equalToConstant: 250).isActive = true
-        
         // SignUpButton
-        signUpButton.topAnchor.constraint(equalTo: profilePhotoPicker.bottomAnchor, constant: 50).isActive = true
+        signUpButton.topAnchor.constraint(equalTo: countryPickerTextField.bottomAnchor, constant: 50).isActive = true
         signUpButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         signUpButton.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -20).isActive = true
         signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
@@ -318,7 +288,6 @@ class SignUpViewController: UIViewController {
         self.usernameTextField.layer.borderColor = UIColor.label.cgColor
         self.passwordTextField.layer.borderColor = UIColor.label.cgColor
         self.countryPickerTextField.layer.borderColor = UIColor.label.cgColor
-        self.profilePhotoPicker.layer.borderColor = UIColor.label.cgColor
         self.signUpButton.layer.borderColor = UIColor.label.cgColor
     }
     
@@ -365,19 +334,5 @@ extension SignUpViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.countryPickerTextField.text = countries[row]
-    }
-}
-
-
-
-extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        guard let image = info[.editedImage] as? UIImage else { return }
-        profilePhotoPicker.image = image
     }
 }

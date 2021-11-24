@@ -16,19 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         FirebaseApp.configure()
-        if AuthManager.shared.isSignedIn {
-            let navVC = UINavigationController(rootViewController: FeedViewController())
+        if Auth.auth().currentUser == nil {
+            let navVC = UINavigationController(rootViewController: SignInViewController())
             navVC.navigationItem.largeTitleDisplayMode = .always
             navVC.navigationBar.prefersLargeTitles = true
             navVC.modalPresentationStyle = .fullScreen
             window.rootViewController = navVC
         } else {
-            let navVC = UINavigationController(rootViewController: SignInViewController())
-            navVC.navigationItem.largeTitleDisplayMode = .always
-            navVC.navigationBar.prefersLargeTitles = true
-            navVC.modalPresentationStyle = .fullScreen
-            navVC.navigationBar.isHidden = false
-            window.rootViewController = navVC
+            window.rootViewController = TabBarViewController()
         }
         window.makeKeyAndVisible()
         self.window = window

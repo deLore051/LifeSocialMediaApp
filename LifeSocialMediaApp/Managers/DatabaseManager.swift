@@ -19,7 +19,8 @@ final class DatabaseManager {
     public func uploadUserInfo(user: UserInfo) {
         self.database
             .collection(K.FStore.User.userInfoCollectionName)
-            .addDocument(data: [
+            .document("\(user.email)")
+            .setData([
                 K.FStore.User.email: user.email,
                 K.FStore.User.firstName: user.firstName,
                 K.FStore.User.lastName: user.lastName,
